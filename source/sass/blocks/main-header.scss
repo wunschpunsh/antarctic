@@ -1,0 +1,163 @@
+.main-header {
+  min-height: 650px;
+  background-image: image-set(
+    url("../img/background/header-background-large.webp") 1x,
+    url("../img/background/header-background-large.png") 1x
+  );
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+
+  @media (min-width: 1024px) {
+    @include retina {
+      background-image: image-set(
+        url("../img/background/header-background-large@2x.webp") 2x,
+        url("../img/background/header-background-large@2x.png") 2x
+      );
+    }
+  }
+
+  @include vp-1023 {
+    min-height: 638px;
+    background-image: image-set(
+      url("../img/background/header-background-medium.webp") 1x,
+      url("../img/background/header-background-medium.png") 1x
+    );
+    filter: none;
+
+    @include retina {
+      background-image: image-set(
+        url("../img/background/header-background-medium@2x.webp") 2x,
+        url("../img/background/header-background-medium@2x.png") 2x
+      );
+    }
+  }
+
+  @include vp-767 {
+    min-height: 500px;
+    background-image: image-set(
+      url("../img/background/header-background-small.webp") 1x,
+      url("../img/background/header-background-small.png") 1x
+    );
+
+    @include retina {
+      background-image: image-set(
+        url("../img/background/header-background-small@2x.webp") 2x,
+        url("../img/background/header-background-small@2x.png") 2x
+      );
+    }
+  }
+}
+
+.main-header__nav-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 35px 0;
+
+  @include vp-1023 {
+    padding: 30px 0;
+  }
+
+  @include vp-767 {
+    padding: 20px 0;
+  }
+}
+
+.main-header__logo {
+  z-index: 10;
+  order: -1;
+  display: block;
+  fill: $color-alice-blue;
+
+  @include vp-1023 {
+    width: 38px;
+    height: 20px;
+  }
+
+  @include vp-767 {
+    width: 42px;
+    height: 22px;
+  }
+}
+
+.main-header__button {
+  z-index: 10;
+  display: none;
+
+  @include vp-767 {
+    position: relative;
+    display: block;
+    width: 24px;
+    height: 12px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 24px;
+      height: 2px;
+      background-color: $color-alice-blue;
+      box-shadow: 0 6px 0 0 $color-alice-blue, 0 12px 0 0 $color-alice-blue;
+    }
+  }
+}
+
+.main-header__hero {
+  padding: 160px 95px 277px;
+
+  @include vp-1023 {
+    padding: 183px 0 273px;
+  }
+
+  @include vp-767 {
+    padding: 116px 0 177px;
+  }
+
+  & h1 {
+    margin: 0;
+    margin-bottom: 15px;
+    font-weight: 700;
+    font-size: 54px;
+    line-height: 66px;
+    color: $color-alice-blue;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+    @include vp-1023 {
+      font-size: 50px;
+      line-height: 61px;
+    }
+
+    @include vp-767 {
+      margin-bottom: 11px;
+      font-size: 36px;
+      line-height: 45px;
+    }
+  }
+
+  & p {
+    margin: 0;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    color: $color-alice-blue;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+    @include vp-1023 {
+      font-size: 18px;
+      line-height: 22px;
+    }
+
+    @include vp-767 {
+      width: 80%;
+      font-size: 16px;
+    }
+  }
+}

@@ -1,64 +1,138 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Описание проекта">
-    <title>ProjectName</title>
-    <link rel="stylesheet" href="css/style.min.css">
-  </head>
-  <body>
-    <div class="wrapper">
-      <header>
-        <div class="container"></div>
-      </header>
-      <main>
-        <section class="intro">
-          <div class="container">
-            <h1>Тестовая страница.</h1>
-            <p>На данной странице показан пример модальных окон.</p>
-            <p>Перед началом разработки не забудьте удалить всё содержимое &#8249;main&#8250;&#8249;&#8260;main&#8250;.</p>
-            <p><a class="btn" href="#" data-open-modal="feedback">modal--feedback link</a></p>
-            <p><a class="btn" href="#" data-open-modal="success">modal--success link</a></p>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Описание проекта">
+  <title>Antarctic</title>
+  <link rel="preload" href="./fonts/montserrat-regular.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="./fonts/montserrat-medium.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="./fonts/montserrat-semibold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="./fonts/montserrat-bold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+  <div class="wrapper">
+
+    <!-- Сюда вешается класс открытия закрытия навигации и рабочего меню, при отключенном JS -->
+    <header class="main-header">
+      <div class="container">
+        <div class="main-header__overlay">
+          <div class="main-header__nav-wrapper nojs">
+            <a class="main-header__link">
+              <svg class="main-header__logo" width="70" height="38" aria-label="логотип красивых гор в шапке сайта">
+                <use xlink:href="img/sprite.svg#main-logo"></use>
+              </svg>
+            </a>
+            <button class="main-header__button">
+              <span class="visually-hidden">Открыть меню</span>
+            </button>
+            <nav class="main-header__nav main-nav">
+              <ul class="main-nav__list">
+                <li class="main-nav__item">
+                  <a href="#" class="main-nav__link">Преимущества</a>
+                </li>
+                <li class="main-nav__item">
+                  <a href="#" class="main-nav__link">Направления</a>
+                </li>
+                <li class="main-nav__item">
+                  <a href="#" class="main-nav__link">Ближайшие круизы</a>
+                </li>
+                <li class="main-nav__item">
+                  <a href="#" class="main-nav__link">Контакты</a>
+                </li>
+              </ul>
+            </nav>
           </div>
+        </div>
+        <section class="main-header__hero">
+          <h1>Круизы в&nbsp;Антарктику</h1>
+          <p>Волшебный мир айсбергов и&nbsp;пингвинов</p>
         </section>
-      </main>
-      <footer>
-        <div class="container"></div>
-      </footer>
-    </div>
-
-    <!-- Модалки -->
-    <div class="modal modal--preload" data-modal="feedback">
-      <div class="modal__wrapper">
-        <div class="modal__overlay" data-close-modal></div>
-        <div class="modal__content">
-          <p class="modal__description">Обычная модалка</p>
-          <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап" data-close-modal>
-            <svg width="15" height="15">
-              <use xlink:href="img/sprite.svg#icon-close"></use>
+      </div>
+    </header>
+    <main>
+      <section class="intro">
+        <div class="container">
+          <div class="intro__container">
+            <div class="intro__description-container">
+              <h2>Путешествие на&nbsp;край&nbsp;Земли</h2>
+              <p>Это волшебное путешествие поможет вам познакомиться поближе с&nbsp;удивительным миром Антарктики.
+                Наш круизный лайнер отвезет вас на&nbsp;край Земли, где вы&nbsp;сможете увидеть: ледяные айсберги,
+                несколько видов
+                пингвинов,
+                китов, морских котиков и&nbsp;многое другое.</p>
+            </div>
+            <div class="intro__image-container">
+              <picture>
+                <source media="(min-width: 320px)"
+                  srcset="./img/content/penguins.webp, ./img/content/penguins@2x.webp 2x" type="image/webp">
+                <img src="./img/content/penguins.jpg" srcset="./img/content/penguins@2x.jpg 2x" width="560" height="301"
+                  alt="3 пингивна смотрят на тебя и зовут в путешествие">
+              </picture>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="main-footer">
+      <div class="container">
+        <div class="main-footer__container">
+          <a class="main-footer__logo-link">
+            <svg class="main-footer__logo" width="70" height="38" aria-label="Логотип красивых гор в подвале сайта">
+              <use xlink:href="img/sprite.svg#main-logo"></use>
             </svg>
-          </button>
+          </a>
+          <nav class="main-footer__nav footer-nav">
+            <ul class="footer-nav__list">
+              <li class="footer-nav__item">
+                <a href="#" class="footer-nav__link">Преимущества</a>
+              </li>
+              <li class="footer-nav__item">
+                <a href="#" class="footer-nav__link">Направления</a>
+              </li>
+              <li class="footer-nav__item">
+                <a href="#" class="footer-nav__link">Ближайшие круизы</a>
+              </li>
+              <li class="footer-nav__item">
+                <a href="#" class="footer-nav__link">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+          <div class="main-footer__social social">
+            <ul class="social__list">
+              <li class="social__item">
+                <a href="#" class="social__link">
+                  <svg class="social__logo social__logo--ok" width="12" height="20" aria-label="Мы в Одноклассниках">
+                    <use xlink:href="img/sprite.svg#ok-logo"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social__item">
+                <a href="#" class="social__link">
+                  <svg class="social__logo" width="20" height="20" aria-label="Мы на Яндекс Дзене">
+                    <use xlink:href="img/sprite.svg#dzen-logo"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social__item">
+                <a href="#" class="social__link">
+                  <svg class="social__logo" width="20" height="20" aria-label="Мы на Реддите">
+                    <use xlink:href="img/sprite.svg#reddit-logo"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
-    </div>
+    </footer>
+  </div>
+  <script src="js/vendor.min.js"></script>
+  <script src="js/main.min.js"></script>
+</body>
 
-    <div class="modal modal--preload modal--fit-content modal--no-scale" data-modal="success">
-      <div class="modal__wrapper">
-        <div class="modal__overlay" data-close-modal></div>
-        <div class="modal__content">
-          <p class="modal__description">Размер этой модалки зависит от ширины контента,<br> отключена анимация-скейл</p>
-          <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап" data-close-modal>
-            <svg width="15" height="15">
-              <use xlink:href="img/sprite.svg#icon-close"></use>
-            </svg>
-          </button>
-        </div>
-      </div>
-    </div>
-
-    <script src="js/vendor.min.js"></script>
-    <script src="js/main.min.js"></script>
-  </body>
 </html>

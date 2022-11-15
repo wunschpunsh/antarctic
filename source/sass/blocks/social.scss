@@ -1,0 +1,38 @@
+.social__list {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.social__item {
+  &:not(:last-child) {
+    margin-right: 27px;
+  }
+}
+
+.social__logo {
+  fill: $color-alice-blue;
+
+  @include vp-1023 {
+    width: 16px;
+    height: 16px;
+
+    &--ok {
+      width: 10px;
+    }
+  }
+
+  @include hover {
+    fill: $color-torch-red;
+  }
+
+  @include focus {
+    outline: 1px solid $color-alice-blue;
+    border-radius: 2px;
+  }
+
+  @include active {
+    opacity: 0.5;
+  }
+}

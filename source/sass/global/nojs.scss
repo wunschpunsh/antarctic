@@ -1,0 +1,26 @@
+.nojs {
+  & .main-header__button {
+    display: none;
+  }
+
+  & .main-nav {
+    display: block;
+  }
+
+  & .main-header__logo {
+    flex-basis: 100%;
+    margin-bottom: 30px;
+  }
+
+  & .main-nav__list {
+    flex-direction: column;
+  }
+
+  & .main-nav__item {
+    padding: 10px 10px 10px 0;
+  }
+
+  & .main-header__hero {
+    padding: 0 0 230px;
+  }
+}

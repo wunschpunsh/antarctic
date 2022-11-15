@@ -1,5 +1,7 @@
 import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
+import {toggleMenu} from './modules/toggle-menu.js';
+import {deleteNoJs} from './modules/nojs.js';
 
 // ---------------------------------
 
@@ -16,7 +18,9 @@ window.addEventListener('DOMContentLoaded', () => {
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
   // в load следует добавить скрипты, не участвующие в работе первого экрана
   window.addEventListener('load', () => {
+    deleteNoJs();
     initModals();
+    toggleMenu();
   });
 });
 

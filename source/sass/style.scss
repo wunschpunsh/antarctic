@@ -14,13 +14,18 @@
 @import "global/reboot";
 @import "global/utils";
 @import "global/container";
+@import "global/nojs.scss";
 
 // Blocks
 // ---------------------------------
 
-@import "blocks/btn";
-@import "blocks/modal";
-
+@import "blocks/main-header.scss";
+@import "blocks/main-nav.scss";
+@import "blocks/show-menu.scss";
+@import "blocks/footer-nav.scss";
+@import "blocks/main-footer.scss";
+@import "blocks/social.scss";
+@import "blocks/intro.scss";
 // ---------------------------------
 
 // ❗❗❗ запрещено использовать изображения в css, касается как jpg \ png, так и svg
