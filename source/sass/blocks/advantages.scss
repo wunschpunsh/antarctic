@@ -1,0 +1,94 @@
+.advantages {
+  background-image: image-set(
+    url("../img/background/advantage-background-large.webp") 1x,
+    url("../img/background/advantage-background-large.png") 1x
+  );
+  background-size: cover;
+  background-color: $color-pale-cornflower-blue;
+
+  @media (min-width: 1024px) {
+    @include retina {
+      background-image: image-set(
+        url("../img/background/advantage-background-large@2x.webp") 2x,
+        url("../img/background/advantage-background-large@2x.png") 2x
+      );
+    }
+  }
+
+  @include vp-1023 {
+    background-image: image-set(
+      url("../img/background/advantage-background-medium.webp") 1x,
+      url("../img/background/advantage-background-medium.png") 1x
+    );
+
+    @include retina {
+      background-image: image-set(
+        url("../img/background/advantage-background-medium@2x.webp") 2x,
+        url("../img/background/advantage-background-medium@2x.png") 2x
+      );
+    }
+  }
+
+  @include vp-767 {
+    background-image: image-set(
+      url("../img/background/advantage-background-small.webp") 1x,
+      url("../img/background/advantage-background-small.png") 1x
+    );
+
+    @include retina {
+      background-image: image-set(
+        url("../img/background/advantage-background-small@2x.webp") 2x,
+        url("../img/background/advantage-background-small@2x.png") 2x
+      );
+    }
+  }
+}
+
+.advantages__container {
+  padding: 110px 0 120px;
+
+  @include vp-1023 {
+    padding: 88px 0 98px;
+  }
+
+  @include vp-767 {
+    padding: 60px 0;
+  }
+
+  & h2 {
+    margin: 0;
+    margin-bottom: 50px;
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 42px;
+    text-align: center;
+
+    @include vp-1023 {
+      font-size: 26px;
+      line-height: 39px;
+    }
+
+    @include vp-767 {
+      margin-bottom: 27px;
+      font-size: 24px;
+      line-height: 36px;
+    }
+  }
+}
+
+.advantages__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 40px;
+
+  @include vp-1023 {
+    column-gap: 30px;
+  }
+
+  @include vp-767 {
+    display: block;
+  }
+}
