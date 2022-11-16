@@ -1,0 +1,22 @@
+.primary-button {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 21px;
+  text-align: center;
+  border: none;
+  cursor: pointer;
+  background-color: $color-alice-blue;
+  color: $color-tangaroa;
+
+  @include hover {
+    color: $color-torch-red;
+  }
+
+  @include focus {
+    outline: 2px solid $color-torch-red;
+  }
+
+  @include active {
+    opacity: 0.7;
+  }
+}
