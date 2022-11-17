@@ -42,7 +42,7 @@
                   <a href="#catalog" class="main-nav__link">Ближайшие круизы</a>
                 </li>
                 <li class="main-nav__item">
-                  <a href="#" class="main-nav__link">Контакты</a>
+                  <a href="#contacts" class="main-nav__link">Контакты</a>
                 </li>
               </ul>
             </nav>
@@ -57,8 +57,8 @@
     <main>
       <section class="intro">
         <div class="container">
-          <div class="intro__container">
-            <div class="intro__description-container">
+          <div class="intro__wrapper">
+            <div class="intro__description-wrapper">
               <h2>Путешествие на&nbsp;край&nbsp;Земли</h2>
               <p>Это волшебное путешествие поможет вам познакомиться поближе с&nbsp;удивительным миром Антарктики.
                 Наш круизный лайнер отвезет вас на&nbsp;край Земли, где вы&nbsp;сможете увидеть: ледяные айсберги,
@@ -66,7 +66,7 @@
                 пингвинов,
                 китов, морских котиков и&nbsp;многое другое.</p>
             </div>
-            <div class="intro__image-container">
+            <div class="intro__image-wrapper">
               <picture>
                 <source media="(min-width: 320px)"
                   srcset="./img/content/penguins.webp, ./img/content/penguins@2x.webp 2x" type="image/webp">
@@ -79,7 +79,7 @@
       </section>
       <section class="advantages" id="advantages">
         <div class="container">
-          <div class="advantages__container">
+          <div class="advantages__wrapper">
             <h2>Преимущества</h2>
             <ul class="advantages__list advantage">
               <li class="advantage__item">
@@ -115,10 +115,10 @@
       </section>
       <section class="catalog" id="catalog">
         <div class="container">
-          <div class="catalog__container">
+          <div class="catalog__wrapper">
             <h2>Ближайшие круизы</h2>
             <ul class="catalog__list card">
-              <li class="card__item">
+              <li class="card__item" tabindex="0">
                 <div class="card__description">
                   <h3>Круиз “Астория”</h3>
                   <h4>Маршрут</h4>
@@ -144,7 +144,7 @@
                   <h3>Круиз “Астория”</h3>
                 </div>
               </li>
-              <li class="card__item">
+              <li class="card__item" tabindex="0">
                 <div class="card__description">
                   <h3>Круиз “Элайн”</h3>
                   <h4>Маршрут</h4>
@@ -170,7 +170,7 @@
                   <h3>Круиз “Элайн”</h3>
                 </div>
               </li>
-              <li class="card__item">
+              <li class="card__item" tabindex="0">
                 <div class="card__description">
                   <h3>Круиз “Атлантис”</h3>
                   <h4>Маршрут</h4>
@@ -196,7 +196,7 @@
                   <h3>Круиз “Атлантис”</h3>
                 </div>
               </li>
-              <li class="card__item">
+              <li class="card__item" tabindex="0">
                 <div class="card__description">
                   <h3>Круиз “Одиссей”</h3>
                   <h4>Маршрут</h4>
@@ -222,7 +222,7 @@
                   </picture>
                 </div>
               </li>
-              <li class="card__item">
+              <li class="card__item" tabindex="0">
                 <div class="card__description">
                   <h3>Круиз “Олимпия”</h3>
                   <h4>Маршрут</h4>
@@ -248,7 +248,7 @@
                   <h3>Круиз “Олимпия”</h3>
                 </div>
               </li>
-              <li class="card__item">
+              <li class="card__item" tabindex="0">
                 <div class="card__description">
                   <h3>Круиз “Аврора”</h3>
                   <h4>Маршрут</h4>
@@ -274,7 +274,7 @@
                   <h3>Круиз “Аврора”</h3>
                 </div>
               </li>
-              <li class="card__item">
+              <li class="card__item" tabindex="0">
                 <div class="card__description">
                   <h3>Круиз “Леонор”</h3>
                   <h4>Маршрут</h4>
@@ -300,7 +300,7 @@
                   <h3>Круиз “Леонор”</h3>
                 </div>
               </li>
-              <li class="card__item">
+              <li class="card__item" tabindex="0">
                 <div class="card__description">
                   <h3>Круиз “Минион - 1”</h3>
                   <h4>Маршрут</h4>
@@ -347,12 +347,13 @@
                 </div>
                 <div class="form__input-wrapper">
                   <label class="visually-hidden" for="user-phone">Ваш номер телефона</label>
-                  <input type="tel" id="user-phone" name="user-phone" minlength="11" maxlength="11" pattern="^[0-9]+$"
-                    placeholder="Телефон" required />
+                  <input type="tel" id="user-phone" name="user-phone" minlength="11" maxlength="11"
+                    pattern=".{0}|.{11,}" placeholder="Телефон" required />
                 </div>
                 <div class="form__input-wrapper">
                   <label class="visually-hidden" for="user-email">Ваша электронная почта</label>
-                  <input type="email" name="user-email" id="user-email" placeholder="Email" required>
+                  <input type="email" name="user-email" id="user-email" placeholder="Email"
+                    pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required>
                 </div>
                 <div class="form__checkbox-wrapper">
                   <h3 class="visually-hidden">Согласие на обработку персональных данных</h3>
@@ -364,9 +365,30 @@
                   </label>
                 </div>
                 <div class="form__send-wrapper">
-                  <button class="form__send-button primary-button" type="submit">Оставить заявку</button>
+                  <button class="form__send-button primary-button" type="submit"
+                    data-id-checkbox="personal-data">Оставить заявку</button>
                 </div>
               </form>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="contacts" id="contacts">
+        <div class="container">
+          <div class="contacts__wrapper">
+            <h2 class="visually-hidden">Наши контакты</h2>
+            <div class="contacts__image-wrapper">
+              <iframe class="contacts__map-google" title="Адрес академии"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d999.3035831034955!2d30.322815414005223!3d59.93866041714261!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1668686157149!5m2!1sru!2sru"
+                style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+              </iframe>
+            </div>
+            <div class="contacts__description">
+              <p>У&nbsp;вас ещё остались вопросы или сомнения? Приезжайте к&nbsp;нам в&nbsp;офис и&nbsp;мы&nbsp;вам
+                все
+                расскажем.</p>
+              <span>г. Санкт Петербург,<br> ул. Большая Конюшенная, 19/8</span>
+              <a class="contacts__phone" href="tel:88002000000">8-800-200-00-00</a>
             </div>
           </div>
         </div>
@@ -374,7 +396,7 @@
     </main>
     <footer class="main-footer">
       <div class="container">
-        <div class="main-footer__container">
+        <div class="main-footer__wrapper">
           <a class="main-footer__logo-link">
             <svg class="main-footer__logo" width="70" height="38" aria-label="Логотип красивых гор в подвале сайта">
               <use xlink:href="img/sprite.svg#main-logo"></use>
@@ -392,7 +414,7 @@
                 <a href="#catalog" class="footer-nav__link">Ближайшие круизы</a>
               </li>
               <li class="footer-nav__item">
-                <a href="#" class="footer-nav__link">Контакты</a>
+                <a href="#contacts" class="footer-nav__link">Контакты</a>
               </li>
             </ul>
           </nav>
@@ -424,6 +446,15 @@
         </div>
       </div>
     </footer>
+
+    <!-- Сообщение об успешной отправке формы -->
+    <div class="success success--preload success--no-scale visually-hidden">
+      <div class="success__overlay" data-close-modal></div>
+      <div class="success__inner">
+        <h2>В&nbsp;ближайшее время мы&nbsp;с&nbsp;Вами свяжемся</h2>
+        <button type="button" class="success__button">Круто!</button>
+      </div>
+    </div>
   </div>
   <script src="js/vendor.min.js"></script>
   <script src="js/main.min.js"></script>

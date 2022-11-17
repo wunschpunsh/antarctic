@@ -2,6 +2,7 @@ import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
 import {toggleMenu} from './modules/toggle-menu.js';
 import {deleteNoJs} from './modules/nojs.js';
+import {submitFeedBackForm} from './modules/form.js';
 
 // ---------------------------------
 
@@ -21,6 +22,7 @@ window.addEventListener('DOMContentLoaded', () => {
     deleteNoJs();
     initModals();
     toggleMenu();
+    submitFeedBackForm();
   });
 });
 

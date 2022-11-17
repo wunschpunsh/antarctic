@@ -38,7 +38,12 @@
     font-size: 14px;
     line-height: 21px;
     border: none;
+    color: $color-tangaroa;
     background-color: $color-alice-blue;
+
+    &::placeholder {
+      color: rgba(1, 28, 64, 0.7);
+    }
 
     @include hover {
       outline: 2px solid $color-torch-red;

@@ -1,0 +1,66 @@
+.success {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  overflow-y: auto;
+  overflow: hidden;
+  -webkit-overflow-scrolling: touch;
+
+  background-color: rgba(0, 0, 0, 0.8);
+
+  & h2 {
+    margin: 0;
+    margin-bottom: 50px;
+    line-height: 1;
+    font-size: 32px;
+  }
+}
+
+.success__inner {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 600px;
+  padding: 100px 20px;
+  padding-bottom: 75px;
+  margin-top: 200px;
+  font-family: $ff-montserrat;
+  text-align: center;
+  font-weight: 700;
+  font-size: 20px;
+  color: $color-alice-blue;
+  background-color: $color-tangaroa;
+  border-radius: 10px;
+}
+
+.success__button {
+  padding: 5px 10px;
+  font-family: $ff-montserrat;
+  color: #ffffff;
+  text-transform: uppercase;
+  background: transparent;
+  border: 2px solid #ffffff;
+  border-radius: 5px;
+
+  @include hover {
+    color: $color-torch-red;
+    border: 2px solid $color-torch-red;
+  }
+
+  @include focus {
+    color: $color-torch-red;
+    border: 2px solid $color-torch-red;
+  }
+
+  @include active {
+    opacity: 0.7;
+  }
+}
