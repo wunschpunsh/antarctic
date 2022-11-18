@@ -37,5 +37,3 @@ const toggleMenu = () => {
   });
 };
 export {toggleMenu};
-
-

@@ -6,12 +6,13 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  background-color: #a2d0fd;
 
   @media (min-width: 1024px) {
     @include retina {
       background-image: image-set(
-        url("../../img/background/form-background-large@2x.png") 2x,
-        url("../../img/background/form-background-large@2x.webp") 2x
+        url("../../img/background/form-background-large@2x.webp") 2x,
+        url("../../img/background/form-background-large@2x.png") 2x
       );
     }
   }
@@ -80,6 +81,7 @@
       display: block;
     }
   }
+
   & h2 {
     margin: 0;
     margin-bottom: 22px;

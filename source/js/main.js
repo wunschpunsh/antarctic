@@ -1,8 +1,9 @@
 import {iosVhFix} from './utils/ios-vh-fix';
-import {initModals} from './modules/modals/init-modals';
 import {toggleMenu} from './modules/toggle-menu.js';
 import {deleteNoJs} from './modules/nojs.js';
 import {submitFeedBackForm} from './modules/form.js';
+import {chooseCardByTouch} from './modules/card-touch-phone.js';
+
 
 // ---------------------------------
 
@@ -20,9 +21,9 @@ window.addEventListener('DOMContentLoaded', () => {
   // в load следует добавить скрипты, не участвующие в работе первого экрана
   window.addEventListener('load', () => {
     deleteNoJs();
-    initModals();
     toggleMenu();
     submitFeedBackForm();
+    chooseCardByTouch();
   });
 });
 

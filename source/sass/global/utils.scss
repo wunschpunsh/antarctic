@@ -36,7 +36,6 @@
 
 .scroll-lock-ios {
   position: fixed;
-
   overflow: hidden;
 }
 
@@ -51,9 +50,4 @@
   &::-webkit-scrollbar {
     display: none;
   }
-}
-
-.no-transition {
-  /* stylelint-disable-next-line */
-  transition: none !important;
 }

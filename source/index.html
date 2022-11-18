@@ -18,7 +18,7 @@
   <div class="wrapper">
 
     <!-- Сюда вешается класс открытия закрытия навигации и рабочего меню, при отключенном JS -->
-    <header class="main-header">
+    <header class="main-header nojs">
       <div class="container">
         <div class="main-header__overlay">
           <div class="main-header__nav-wrapper nojs">
@@ -71,7 +71,7 @@
                 <source media="(min-width: 320px)"
                   srcset="./img/content/penguins.webp, ./img/content/penguins@2x.webp 2x" type="image/webp">
                 <img src="./img/content/penguins.jpg" srcset="./img/content/penguins@2x.jpg 2x" width="560" height="301"
-                  alt="3 пингивна смотрят на тебя и зовут в путешествие">
+                  alt="3 пингивна смотрят на тебя и зовут в путешествие.">
               </picture>
             </div>
           </div>
@@ -117,8 +117,10 @@
         <div class="container">
           <div class="catalog__wrapper">
             <h2>Ближайшие круизы</h2>
+
+            <!-- На все дочерние <li> вешается класс nojs при отключенном javascript и is-open для просмотра описание карточки на смартфонах и планшетах -->
             <ul class="catalog__list card">
-              <li class="card__item" tabindex="0">
+              <li class="card__item nojs" tabindex="0">
                 <div class="card__description">
                   <h3>Круиз “Астория”</h3>
                   <h4>Маршрут</h4>
@@ -139,12 +141,11 @@
                       srcset="./img/content/cruise-astoria.webp, ./img/content/cruise-astoria@2x.webp 2x"
                       type="image/webp">
                     <img src="./img/content/cruise-astoria.jpg" srcset="./img/content/cruise-astoria@2x.jpg 2x"
-                      width="260" height="386" alt="Вид на гору с замерзшего озера в круизе Астория">
+                      width="260" height="386" alt="Вид на гору с замерзшего озера в круизе Астория.">
                   </picture>
-                  <h3>Круиз “Астория”</h3>
                 </div>
               </li>
-              <li class="card__item" tabindex="0">
+              <li class="card__item nojs" tabindex="0">
                 <div class="card__description">
                   <h3>Круиз “Элайн”</h3>
                   <h4>Маршрут</h4>
@@ -165,12 +166,11 @@
                       srcset="./img/content/cruise-astoria.webp, ./img/content/cruise-astoria@2x.webp 2x"
                       type="image/webp">
                     <img src="./img/content/cruise-astoria.jpg" srcset="./img/content/cruise-astoria@2x.jpg 2x"
-                      width="260" height="386" alt="Вид на гору с замерзшего озера в круизе Астория">
+                      width="260" height="386" alt="Вид на гору с замерзшего озера в круизе Элайн.">
                   </picture>
-                  <h3>Круиз “Элайн”</h3>
                 </div>
               </li>
-              <li class="card__item" tabindex="0">
+              <li class="card__item nojs" tabindex="0">
                 <div class="card__description">
                   <h3>Круиз “Атлантис”</h3>
                   <h4>Маршрут</h4>
@@ -191,12 +191,11 @@
                       srcset="./img/content/cruise-atlantis.webp, ./img/content/cruise-atlantis@2x.webp 2x"
                       type="image/webp">
                     <img src="./img/content/cruise-atlantis.jpg" srcset="./img/content/cruise-atlantis@2x.jpg 2x"
-                      width="260" height="386" alt="Вид на ледники с нашего лайнера в круизе Атлантис">
+                      width="260" height="386" alt="Вид на ледники с нашего лайнера в круизе Атлантис.">
                   </picture>
-                  <h3>Круиз “Атлантис”</h3>
                 </div>
               </li>
-              <li class="card__item" tabindex="0">
+              <li class=" card__item nojs" tabindex="0">
                 <div class="card__description">
                   <h3>Круиз “Одиссей”</h3>
                   <h4>Маршрут</h4>
@@ -212,17 +211,16 @@
                   <a href="#" class="card__button primary-button">Забронировать</a>
                 </div>
                 <div class="card__image">
-                  <h3>Круиз “Одиссей”</h3>
                   <picture>
                     <source media="(min-width: 320px)"
                       srcset="./img/content/cruise-odysseus.webp, ./img/content/cruise-odysseus@2x.webp 2x"
                       type="image/webp">
                     <img src="./img/content/cruise-odysseus.jpg" srcset="./img/content/cruise-odysseus@2x.jpg 2x"
-                      width="260" height="386" alt="Вид на горы с берега озера в круизе Одиссей">
+                      width="260" height="386" alt="Вид на горы с берега озера в круизе Одиссей.">
                   </picture>
                 </div>
               </li>
-              <li class="card__item" tabindex="0">
+              <li class="card__item nojs" tabindex="0">
                 <div class="card__description">
                   <h3>Круиз “Олимпия”</h3>
                   <h4>Маршрут</h4>
@@ -243,12 +241,11 @@
                       srcset="./img/content/cruise-olympia.webp, ./img/content/cruise-olympia@2x.webp 2x"
                       type="image/webp">
                     <img src="./img/content/cruise-olympia.jpg" srcset="./img/content/cruise-olympia@2x.jpg 2x"
-                      width="260" height="386" alt="Здесь вы увидите пингвинов в круизе Олимпия">
+                      width="260" height="386" alt="Здесь вы увидите пингвинов в круизе Олимпия.">
                   </picture>
-                  <h3>Круиз “Олимпия”</h3>
                 </div>
               </li>
-              <li class="card__item" tabindex="0">
+              <li class="card__item nojs" tabindex="0">
                 <div class="card__description">
                   <h3>Круиз “Аврора”</h3>
                   <h4>Маршрут</h4>
@@ -269,12 +266,11 @@
                       srcset="./img/content/cruise-aurora.webp, ./img/content/cruise-aurora@2x.webp 2x"
                       type="image/webp">
                     <img src="./img/content/cruise-aurora.jpg" srcset="./img/content/cruise-aurora@2x.jpg 2x"
-                      width="260" height="386" alt="Красивые пляжные скалы в круизе Аврора">
+                      width="260" height="386" alt="Красивые пляжные скалы в круизе Аврора.">
                   </picture>
-                  <h3>Круиз “Аврора”</h3>
                 </div>
               </li>
-              <li class="card__item" tabindex="0">
+              <li class="card__item nojs" tabindex="0">
                 <div class="card__description">
                   <h3>Круиз “Леонор”</h3>
                   <h4>Маршрут</h4>
@@ -295,12 +291,11 @@
                       srcset="./img/content/cruise-leonor.webp, ./img/content/cruise-leonor@2x.webp 2x"
                       type="image/webp">
                     <img src="./img/content/cruise-leonor.jpg" srcset="./img/content/cruise-leonor@2x.jpg 2x"
-                      width="260" height="386" alt="Посетите красивую деревню в круизе Леонор">
+                      width="260" height="386" alt="Посетите красивую деревню в круизе Леонор.">
                   </picture>
-                  <h3>Круиз “Леонор”</h3>
                 </div>
               </li>
-              <li class="card__item" tabindex="0">
+              <li class="card__item nojs" tabindex="0">
                 <div class="card__description">
                   <h3>Круиз “Минион - 1”</h3>
                   <h4>Маршрут</h4>
@@ -321,9 +316,8 @@
                       srcset="./img/content/cruise-minion-1.webp, ./img/content/cruise-minion-1@2x.webp 2x"
                       type="image/webp">
                     <img src="./img/content/cruise-minion-1.jpg" srcset="./img/content/cruise-minion-1@2x.jpg 2x"
-                      width="260" height="386" alt="Посетите красивую деревню в круизе Леонор">
+                      width="260" height="386" alt="Посетите красивую озеро в круизе Миньон-1.">
                   </picture>
-                  <h3>Круиз “Минион - 1”</h3>
                 </div>
               </li>
             </ul>
@@ -378,7 +372,7 @@
           <div class="contacts__wrapper">
             <h2 class="visually-hidden">Наши контакты</h2>
             <div class="contacts__image-wrapper">
-              <iframe class="contacts__map-google" title="Адрес академии"
+              <iframe class="contacts__map-google" title="г. Санкт Петербург, ул. Большая Конюшенная, 19/8"
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d999.3035831034955!2d30.322815414005223!3d59.93866041714261!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1668686157149!5m2!1sru!2sru"
                 style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
               </iframe>

@@ -1,6 +1,5 @@
 .main-header {
   min-height: 650px;
-  background-color: #186abb;
   background-image: image-set(
     url("../img/background/header-background-large.webp") 1x,
     url("../img/background/header-background-large.png") 1x
@@ -8,7 +7,8 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  background-color: #186abb;
+  filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25));
 
   @media (min-width: 1024px) {
     @include retina {
@@ -129,7 +129,7 @@
     font-size: 54px;
     line-height: 66px;
     color: $color-alice-blue;
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 
     @include vp-1023 {
       font-size: 50px;
@@ -149,7 +149,7 @@
     font-size: 20px;
     line-height: 24px;
     color: $color-alice-blue;
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 
     @include vp-1023 {
       font-size: 18px;

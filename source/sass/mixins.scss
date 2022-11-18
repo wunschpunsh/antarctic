@@ -37,6 +37,22 @@
   }
 }
 
+@mixin show-description {
+  .card__image {
+    z-index: -1;
+  }
+
+  h3 {
+    position: static;
+    padding: 0;
+    margin-bottom: 14px;
+  }
+
+  & {
+    overflow-y: auto;
+  }
+}
+
 // Desktop first
 
 @mixin vp-1919 {
