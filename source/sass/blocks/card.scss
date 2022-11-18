@@ -2,17 +2,16 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  width: 260px;
   height: 386px;
-  margin: 15px;
+  max-width: 260px;
   padding: 28px 25px 35px;
   overflow: auto;
   background-color: $color-tangaroa;
 
   @include vp-1023 {
     padding: 28px 35px 35px;
-    margin: 0;
     width: 100%;
+    max-width: 100%;
     min-width: 309px;
   }
 

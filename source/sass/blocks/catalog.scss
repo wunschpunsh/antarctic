@@ -1,5 +1,5 @@
 .catalog__wrapper {
-  padding: 84px 0 105px;
+  padding: 84px 0 120px;
 
   @include vp-1023 {
     padding: 90px 0 100px;
@@ -11,7 +11,7 @@
 
   & h2 {
     margin: 0;
-    margin-bottom: 34px;
+    margin-bottom: 50px;
     font-weight: 600;
     font-size: 28px;
     line-height: 42px;
@@ -32,17 +32,15 @@
 }
 
 .catalog__list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
   padding: 0;
-  margin: 0 auto;
+  margin: 0 15px;
   list-style: none;
 
   @include vp-1023 {
-    display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 30px;
     margin: 0 15px;
   }
 
