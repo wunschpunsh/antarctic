@@ -11,8 +11,8 @@
   @media (min-width: 1024px) {
     @include retina {
       background-image: image-set(
-        url("../../img/background/form-background-large@2x.webp") 2x,
-        url("../../img/background/form-background-large@2x.png") 2x
+        url("../img/background/form-background-large@2x.webp") 2x,
+        url("../img/background/form-background-large@2x.png") 2x
       );
     }
   }
