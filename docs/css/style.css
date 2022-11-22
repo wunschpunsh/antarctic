@@ -1226,7 +1226,7 @@ button,
   left: 3px;
   width: 12px;
   height: 8px;
-  background-image: url("../../img/svg/check.svg");
+  background-image: url("../img/svg/check.svg");
   background-repeat: no-repeat;
 }
 
@@ -1401,7 +1401,7 @@ button,
   left: 0;
   width: 18px;
   height: 22px;
-  background-image: url("../../img/svg/point.svg");
+  background-image: url("../img/svg/point.svg");
   background-repeat: no-repeat;
 }
 
@@ -1421,7 +1421,7 @@ button,
   left: 0;
   width: 18px;
   height: 18px;
-  background-image: url("../../img/svg/phone.svg");
+  background-image: url("../img/svg/phone.svg");
   background-repeat: no-repeat;
 }
 
@@ -1488,8 +1488,8 @@ button,
   }
 
   .feedback {
-    background-image: -webkit-image-set(url("../../img/background/form-background-large@2x.webp") 2x, url("../../img/background/form-background-large@2x.png") 2x);
-    background-image: image-set(url("../../img/background/form-background-large@2x.webp") 2x, url("../../img/background/form-background-large@2x.png") 2x);
+    background-image: -webkit-image-set(url("../img/background/form-background-large@2x.webp") 2x, url("../img/background/form-background-large@2x.png") 2x);
+    background-image: image-set(url("../img/background/form-background-large@2x.webp") 2x, url("../img/background/form-background-large@2x.png") 2x);
   }
 
   .contacts__image-wrapper {
