@@ -2,11 +2,24 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  height: 386px;
   max-width: 260px;
   padding: 28px 25px 35px;
-  overflow: auto;
+  overflow: hidden;
   background-color: $color-tangaroa;
+
+  &::before {
+    content: "";
+    display: block;
+    padding-top: 154%;
+
+    @include vp-1023 {
+      padding-top: 135%;
+    }
+
+    @include vp-767 {
+      padding-top: 0;
+    }
+  }
 
   @include vp-1023 {
     padding: 28px 35px 35px;
@@ -18,7 +31,8 @@
   @include vp-767 {
     padding: 28px 25px 35px;
     width: 100%;
-    min-width: 0;
+    height: 386px;
+    min-width: 270px;
 
     &:not(:last-child) {
       margin-bottom: 30px;
@@ -35,42 +49,37 @@
     }
   }
 
-  @include vp-1023 {
-    &.is-open {
-      & .card__image {
-        z-index: -1;
-      }
-
-      h3 {
-        position: static;
-        padding: 0;
-        margin-bottom: 14px;
-      }
-    }
-  }
+  @include show-description-js;
 }
 
 .card__description {
+  position: absolute;
+  left: 12%;
+  right: 10%;
+  bottom: 6%;
+
+  @include vp-1023 {
+    bottom: 7%;
+    left: 11%;
+  }
+
+  @include vp-767 {
+    bottom: 4%;
+    left: 9%;
+  }
+
   & h3 {
     z-index: 1;
     position: absolute;
     bottom: 0;
-    left: 30px;
     margin: 0;
-    padding-bottom: 23px;
     font-weight: 500;
-    font-size: 18px;
+    font-size: calc((100vw - 1024px) / (1366 - 1024) * (18 - 16) + 16px);
     line-height: 27px;
     color: $color-alice-blue;
 
     @include vp-1023 {
-      left: 35px;
-      padding-bottom: 27px;
-    }
-
-    @include vp-767 {
-      left: 25px;
-      padding-bottom: 17px;
+      font-size: 18px;
     }
   }
 
@@ -78,17 +87,25 @@
     margin: 0;
     margin-bottom: 2px;
     font-weight: 500;
-    font-size: 14px;
+    font-size: calc((100vw - 1024px) / (1366 - 1024) * (14 - 12) + 12px);
     line-height: 20px;
     color: $color-alice-blue;
+
+    @include vp-1023 {
+      font-size: 14px;
+    }
   }
 
   & p {
     margin: 0;
     margin-bottom: 10px;
-    font-size: 14px;
+    font-size: calc((100vw - 1024px) / (1366 - 1024) * (14 - 12) + 12px);
     line-height: 20px;
     color: #d8d8d9;
+
+    @include vp-1023 {
+      font-size: 14px;
+    }
   }
 }
 
@@ -107,7 +124,7 @@
 }
 
 .card__button-wrapper {
-  margin-top: auto;
+  display: none;
 }
 
 .card__button {
