@@ -2131,14 +2131,14 @@ button,
   }
 
   .card__item::before {
-    padding-top: 0;
+    padding-top: 147%;
   }
 
   .card__item {
     padding: 28px 25px 35px;
     width: 100%;
-    height: 386px;
     min-width: 270px;
+    max-height: 500px;
   }
 
   .card__item:not(:last-child) {
