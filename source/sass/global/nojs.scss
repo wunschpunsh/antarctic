@@ -33,7 +33,16 @@
     }
 
     & h3 {
-      top: 28px;
+      position: static;
+      margin-bottom: 25px;
+    }
+
+    & .card__description {
+      position: static;
+    }
+
+    & .card__button-wrapper {
+      display: block;
     }
   }
 }

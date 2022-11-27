@@ -1011,16 +1011,12 @@ button,
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  max-width: 260px;
+  width: 100%;
+  height: 28.3vw;
   padding: 28px 25px 35px;
+  max-height: 386px;
   overflow: hidden;
   background-color: #011c40;
-}
-
-.card__item::before {
-  content: "";
-  display: block;
-  padding-top: 154%;
 }
 
 .card__description {
@@ -1036,7 +1032,7 @@ button,
   bottom: 0;
   margin: 0;
   font-weight: 500;
-  font-size: calc((100vw - 1024px) / 342 * 2 + 16px);
+  font-size: 18px;
   line-height: 27px;
   color: #f9fbfd;
 }
@@ -1045,7 +1041,7 @@ button,
   margin: 0;
   margin-bottom: 2px;
   font-weight: 500;
-  font-size: calc((100vw - 1024px) / 342 * 2 + 12px);
+  font-size: 14px;
   line-height: 20px;
   color: #f9fbfd;
 }
@@ -1053,7 +1049,7 @@ button,
 .card__description p {
   margin: 0;
   margin-bottom: 10px;
-  font-size: calc((100vw - 1024px) / 342 * 2 + 12px);
+  font-size: 14px;
   line-height: 20px;
   color: #d8d8d9;
 }
@@ -1597,7 +1593,16 @@ button,
   }
 
   .nojs h3 {
-    top: 28px;
+    position: static;
+    margin-bottom: 25px;
+  }
+
+  .nojs .card__description {
+    position: static;
+  }
+
+  .nojs .card__button-wrapper {
+    display: block;
   }
 
   .main-header {
@@ -1749,15 +1754,14 @@ button,
     margin: 0 15px;
   }
 
-  .card__item::before {
-    padding-top: 135%;
-  }
-
   .card__item {
     padding: 28px 35px 35px;
     width: 100%;
     max-width: 100%;
     min-width: 309px;
+    min-height: 386px;
+    max-height: 489px;
+    height: 50vw;
   }
 
   .card__item.is-open {
@@ -1800,18 +1804,6 @@ button,
   .card__description {
     bottom: 7%;
     left: 11%;
-  }
-
-  .card__description h3 {
-    font-size: 18px;
-  }
-
-  .card__description h4 {
-    font-size: 14px;
-  }
-
-  .card__description p {
-    font-size: 14px;
   }
 
   .feedback {
@@ -2130,15 +2122,12 @@ button,
     margin: 0 10px;
   }
 
-  .card__item::before {
-    padding-top: 147%;
-  }
-
   .card__item {
     padding: 28px 25px 35px;
     width: 100%;
     min-width: 270px;
-    max-height: 500px;
+    height: 120vw;
+    max-height: 700px;
   }
 
   .card__item:not(:last-child) {
