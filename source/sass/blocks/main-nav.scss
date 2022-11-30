@@ -1,5 +1,12 @@
 .main-nav {
+  max-width: 1050px;
+
+  @include vp-1023 {
+    max-width: 625px;
+  }
+
   @include vp-767 {
+    max-width: 100%;
     display: none;
   }
 }

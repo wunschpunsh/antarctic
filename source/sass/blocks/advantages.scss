@@ -82,10 +82,10 @@
   list-style: none;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  column-gap: 40px;
+  gap: 40px;
 
   @include vp-1023 {
-    column-gap: 30px;
+    gap: 30px;
   }
 
   @include vp-767 {

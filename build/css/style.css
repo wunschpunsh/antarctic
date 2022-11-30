@@ -640,8 +640,6 @@ button,
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
@@ -683,6 +681,10 @@ button,
   line-height: 24px;
   color: #f9fbfd;
   text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.main-nav {
+  max-width: 1050px;
 }
 
 .main-nav__list {
@@ -790,6 +792,8 @@ button,
 
 .footer-nav {
   margin-right: auto;
+  -ms-flex-preferred-size: 75%;
+  flex-basis: 75%;
 }
 
 .footer-nav__list {
@@ -834,8 +838,6 @@ button,
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
   padding: 50px 0;
 }
 
@@ -846,6 +848,10 @@ button,
 .main-footer__logo {
   display: block;
   fill: #f9fbfd;
+}
+
+.social {
+  max-width: 216px;
 }
 
 .social__list {
@@ -881,9 +887,6 @@ button,
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
@@ -973,9 +976,7 @@ button,
   display: grid;
   -ms-grid-columns: 1fr 1fr 1fr;
   grid-template-columns: 1fr 1fr 1fr;
-  -webkit-column-gap: 40px;
-  -moz-column-gap: 40px;
-  column-gap: 40px;
+  gap: 40px;
 }
 
 .catalog__wrapper {
@@ -1379,16 +1380,13 @@ button,
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
   width: 43%;
   min-height: 156px;
 }
 
 .contacts__description p {
   margin: 0;
-  margin-bottom: 10px;
+  margin-bottom: 29px;
   font-weight: 500;
   font-size: 18px;
   line-height: 27px;
@@ -1398,6 +1396,7 @@ button,
   position: relative;
   display: block;
   padding-left: 28px;
+  margin-bottom: 23px;
 }
 
 .contacts__description span::after {
@@ -1416,8 +1415,13 @@ button,
 }
 
 .contacts__phone {
+  display: inline-block;
   position: relative;
   padding-left: 28px;
+}
+
+.contacts__phone:nth-child(odd) {
+  margin-right: 20px;
 }
 
 .contacts__phone::after {
@@ -1636,6 +1640,10 @@ button,
     line-height: 22px;
   }
 
+  .main-nav {
+    max-width: 625px;
+  }
+
   .main-nav__item:not(:last-child) {
     margin-right: 26px;
   }
@@ -1661,6 +1669,10 @@ button,
   .main-footer__logo {
     width: 38px;
     height: 20px;
+  }
+
+  .social {
+    max-width: 130px;
   }
 
   .social__item:not(:last-child) {
@@ -1733,9 +1745,7 @@ button,
   }
 
   .advantages__list {
-    -webkit-column-gap: 30px;
-    -moz-column-gap: 30px;
-    column-gap: 30px;
+    gap: 30px;
   }
 
   .catalog__wrapper {
@@ -1866,7 +1876,7 @@ button,
   }
 
   .contacts__description p {
-    margin-bottom: 4px;
+    margin-bottom: 23px;
   }
 
   .contacts__description span::after {
@@ -1958,6 +1968,8 @@ button,
 
   .main-header__nav-wrapper {
     padding: 20px 0;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
   }
 
   .main-header__logo {
@@ -2003,6 +2015,7 @@ button,
   }
 
   .main-nav {
+    max-width: 100%;
     display: none;
   }
 
@@ -2230,6 +2243,7 @@ button,
   }
 
   .contacts__phone {
+    margin-right: 0;
     margin-bottom: 37px;
   }
 }

@@ -80,7 +80,6 @@
 .contacts__description {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   width: 43%;
   min-height: 156px;
 
@@ -96,13 +95,13 @@
 
   & p {
     margin: 0;
-    margin-bottom: 10px;
+    margin-bottom: 29px;
     font-weight: 500;
     font-size: 18px;
     line-height: 27px;
 
     @include vp-1023 {
-      margin-bottom: 4px;
+      margin-bottom: 23px;
     }
 
     @include vp-767 {
@@ -114,6 +113,7 @@
     position: relative;
     display: block;
     padding-left: 28px;
+    margin-bottom: 23px;
 
     &::after {
       content: "";
@@ -145,10 +145,16 @@
 }
 
 .contacts__phone {
+  display: inline-block;
   position: relative;
   padding-left: 28px;
 
+  &:nth-child(odd) {
+    margin-right: 20px;
+  }
+
   @include vp-767 {
+    margin-right: 0;
     margin-bottom: 37px;
   }
 

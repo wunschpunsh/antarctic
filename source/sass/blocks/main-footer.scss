@@ -5,7 +5,6 @@
 .main-footer__wrapper {
   display: flex;
   align-items: center;
-  flex-wrap: wrap;
   padding: 50px 0;
 
   @include vp-767 {
